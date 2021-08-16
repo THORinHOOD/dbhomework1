@@ -23,7 +23,7 @@ public class LinkedSuperIntegerList implements SuperIntegerList {
 
     @Override
     public void removeByIndex(int index) {
-        if (index < 0) {
+        if (index < 0 || root == null) {
             throw new IndexOutOfBoundsException("Index out of range");
         }
         if (index == 0) {

@@ -74,9 +74,11 @@ public class LinkedSuperIntegerListTest {
         list.add(6);
         assertThrows(IndexOutOfBoundsException.class, () -> list.get(2));
         assertThrows(IndexOutOfBoundsException.class, () -> list.get(-1));
+        assertThrows(IndexOutOfBoundsException.class, () -> list.removeByIndex(2));
         list.removeByIndex(0);
         list.removeByIndex(0);
         assertThrows(IndexOutOfBoundsException.class, () -> list.get(0));
+        assertThrows(IndexOutOfBoundsException.class, () -> list.removeByIndex(0));
     }
 
 }
